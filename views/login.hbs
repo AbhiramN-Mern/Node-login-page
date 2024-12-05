@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Signup</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    .custom-form-container {
+      max-width: 350px; /* You can adjust this value to control the width */
+      width: 100%;      /* Ensures the form takes full width up to max-width */
+    }
+  </style>
+</head>
+<body class="bg-light d-flex justify-content-center align-items-center" style="height: 100vh;">
+
+  <div class="custom-form-container p-4 border rounded bg-white shadow">
+    <h3 class="text-center mb-4">Login</h3>
+
+    {{#if message}}
+    <p style="color: red;">{{message}}</p>
+    {{/if}}
+
+    <form action="/verify" method="post">
+
+      <!-- Email -->
+      <div class="mb-3">
+        <label for="username" class="form-label">UserName</label>
+        <input type="text" class="form-control form-control-sm" name="username" id="username" placeholder="Enter your UserName" >
+      </div>
+      <!-- Password -->
+      <div class="mb-3">
+        <label for="password" class="form-label">Password</label>
+        <input type="password" class="form-control form-control-sm" name="password" id="password" placeholder="Enter your password">
+      </div>
+      <!-- Submit Button -->
+      <button type="submit" class="btn btn-primary w-100">Login</button>
+    </form>
+  </div>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script
+    type="module"
+    src="https://cdn.jsdelivr.net/npm/@bufferhead/nightowl@0.0.14/dist/nightowl.js"
+></script>
+</body>
+</html>

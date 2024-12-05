@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>404 Error</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f2f2f2;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            text-align: center;
+            color: #333;
+        }
+
+        .error-container {
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 500px;
+        }
+
+        .error-container h1 {
+            font-size: 100px;
+            color: #ff4f4f;
+            margin-bottom: 20px;
+        }
+
+        .error-container p {
+            font-size: 18px;
+            margin-bottom: 20px;
+        }
+
+        .error-container a {
+            text-decoration: none;
+            color: #fff;
+            background-color: #ff4f4f;
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-size: 16px;
+            transition: background-color 0.3s;
+        }
+
+        .error-container a:hover {
+            background-color: #e04343;
+        }
+
+        .error-container img {
+            max-width: 100%;
+            height: auto;
+            margin-top: 20px;
+        }
+
+        .error-container .message {
+            font-size: 16px;
+            color: #888;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="error-container">
+        <h1>404</h1>
+        <p>{{errorMessage}}</p>
+        <a href="/">Go Back to Home</a>
+        <div class="message">
+            <p>If you think something is wrong, please contact us</p>
+        </div>
+    </div>
+
+</body>
+</html>
